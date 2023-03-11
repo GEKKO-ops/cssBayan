@@ -9,6 +9,10 @@ body {
     line-height: 1.2;
 
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 .wrapper {
     display: flex;
@@ -18,38 +22,61 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    padding: 1rem;
+}
+
+.row {
+    width: 50rem;
+}
+
 .accordion-item {
     border-top: 1px solid #c9c5c5;
 }
 
-.accordion-item label {
-    padding: 20px 5px;
+.accordion-titel {
+    padding: 0.5rem;
     position: relative;
-    height: 60px;
     cursor: pointer;
     color: blue;
-    line-height: 33px;
-    font-size: 30px;
     font-weight: 700;
     transition: all .2s;
 
 }
 
-.accordion-item label:hover {
+.accordion-titel:hover {
     color: black;
 }
 
+.accordion-img {
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
 .accordion-body {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s;
 }
 
 .accordion-input:checked ~ .accordion-body {
-    display: block;
+    max-height: 35rem;
+}
+
+.accordion-input:checked ~ .accordion-titel {
+    color: black;
 }
 
 .icon {
-    width: 2rem;
-    height: 2rem;
+    transition: all 0.5s linear;
+    width: 1rem;
+}
+
+.accordion-input:checked ~ label .icon {
+    transform: rotate(45deg);
 }
 
 .accordion-titel {
