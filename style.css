@@ -25,7 +25,6 @@ body {
 .accordion-item label {
     padding: 20px 5px;
     position: relative;
-    display: block;
     height: 60px;
     cursor: pointer;
     color: blue;
@@ -48,3 +47,13 @@ body {
     display: block;
 }
 
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.accordion-titel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
