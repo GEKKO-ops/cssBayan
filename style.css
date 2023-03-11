@@ -135,5 +135,9 @@ h1 {
         color: blue;
     }
 
+    .accordion-item:active .icon {
+        stroke: blue;
+    }
+
 
 }
