@@ -28,7 +28,7 @@ body {
     display: block;
     height: 60px;
     cursor: pointer;
-    color: black;
+    color: blue;
     line-height: 33px;
     font-size: 30px;
     font-weight: 700;
@@ -37,14 +37,14 @@ body {
 }
 
 .accordion-item label:hover {
-    color: blue;
+    color: black;
 }
 
-.accordion-img {
+.accordion-body {
     display: none;
 }
 
-.accordion-input:checked + .accordion-body .accordion-img {
+.accordion-input:checked ~ .accordion-body {
     display: block;
 }
 
