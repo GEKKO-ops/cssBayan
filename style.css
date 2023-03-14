@@ -135,6 +135,10 @@ h1 {
         color: blue;
     }
 
+    .accordion-item:active .accordion-img {
+        filter: brightness(1.4);
+    }
+
     .accordion-item:active .icon {
         stroke: blue;
     }
