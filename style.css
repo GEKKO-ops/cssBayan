@@ -69,10 +69,12 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: all .2s;
+    transform: scale(0);
 }
 
 .accordion-input:checked ~ label .accordion-body {
     max-height: 35rem;
+    transform: scale(1);
 }
 
 .accordion-input:checked ~ .accordion-titel {
@@ -125,6 +127,7 @@ h1 {
 
     .accordion-item:hover .accordion-body {
         max-height: 35rem;
+        transform: scale(1);
     }
 
     .accordion-item:hover .icon {
