@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    line-height: 1.2;
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+}
+
+h1 {
+    padding: 1rem;
+    font-weight: 800;
+}
+
+.row {
+    width: 50rem;
+}
+
+.accordion-item {
+    border-top: 1px solid #c9c5c5;
+}
+
+.accordion-titel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    position: relative;
+    cursor: pointer;
+    color: blue;
+    font-weight: 700;
+    transition: all .2s;
+
+}
+
+.accordion-titel:hover {
+    color: black;
+}
+
+.accordion-img {
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.accordion-body {
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s;
+    transform: scale(0);
+}
+
+.accordion-input:checked ~ label .accordion-body {
+    max-height: 35rem;
+    transform: scale(1);
+}
+
+.accordion-input:checked ~ .accordion-titel {
+    color: black;
+}
+
+.icon {
+    transition: all 0.5s linear;
+    width: 1rem;
+}
+
+.accordion-input:checked ~ label .icon {
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-titel {
+        font-size: 1.2rem;
+    }
+
+    .icon {
+        width: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+
+    .accordion-titel {
+        font-size: 1.6rem;
+        margin: 0.5rem 0;
+    }
+
+    .icon {
+        width: 2rem;
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .accordion:hover .icon {
+        opacity: 1;
+    }
+
+    .accordion:hover .accordion-titel {
+        color: black;
+    }
+
+    .accordion-body {
+        cursor: pointer;
+    }
+
+    .accordion-item:hover .accordion-body {
+        max-height: 35rem;
+        transform: scale(1);
+    }
+
+    .accordion-item:hover .icon {
+        transform: rotate(45deg);
+    }
+
+    .accordion-item:active .accordion-titel {
+        color: blue;
+    }
+
+    .accordion-item:active .accordion-img {
+        filter: brightness(1.4);
+    }
+
+    .accordion-item:active .icon {
+        stroke: blue;
+    }
+
+
+}
